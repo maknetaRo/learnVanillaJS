@@ -1,0 +1,45 @@
+<html>
+
+<body>
+   
+    <script>
+        // 1. As alert message or console log 
+// prompt the name 
+// catch the name 
+// output on the screen
+
+let yourName = prompt("What's your name? ")
+while (yourName === "") {
+    alert("Please, write you name")
+    yourName = prompt("What's your name? ")
+}
+
+let message = `Hello, ${yourName}, nice to meet you!`
+alert(message)
+let nameLength = yourName.length
+let message2 = `${yourName} has ${nameLength} characters.`;
+alert(message2)
+
+const countries = ["Poland", "Germany", "Sweden", "Austria", "France", "Lithuanina", "Hungary", "Chech Republic"];
+let yourCountry = prompt("Where are you from?")
+while (yourCountry === "") {
+    alert("Please, write your country");
+    yourCountry = prompt("Where are you from?");
+}
+let message3;
+let message4;
+if (countries.includes(yourCountry)) {
+    message3 = `${yourCountry} is the most beautiful place I've ever visited.`;
+    alert(message3)
+} else  {
+    message4 = `I have never been to ${yourCountry}. It's on my travel bucket list.`
+    alert(message4)
+}
+
+    </script>
+</body>
+</html>
+
+
+
+
