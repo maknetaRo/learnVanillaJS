@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            let age = prompt("What is your current age?");
+            age = Number(age);
+
+            let retirementAge = prompt("At what age wyould you like to retire?");
+            retirementAge = Number(retirementAge);
+
+            let currentDate = new Date()
+            let currentYear = currentDate.getFullYear(0);
+            currentYear = Number(currentYear);
+
+            let rertirementYear = currentYear + (retirementAge - age);
+            if (rertirementYear < currentYear) {
+                alert("You can already retire.");
+            } alert(rertirementYear);
+            
+        </script>
+    </body>
+</html>
+
+
+
