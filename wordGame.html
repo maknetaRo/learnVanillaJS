@@ -1,0 +1,64 @@
+<html>
+  <body>
+    <script>
+            const words = ["frizzler", "japanize", "maximize", "increase", "bluejack", "coffeecake", "drizzle", "pizzeria", "backpack" ]
+            const arrayWords = []
+            for (elem of words) {
+                arrayWords.push(elem.split(""))
+            }
+            console.log(arrayWords)
+          
+          
+               
+                    let num = arrayWords.length
+                console.log(num)
+                let randomNumber = Math.floor(Math.random() * num)
+                console.log(randomNumber)
+                let randomWord = arrayWords[randomNumber]
+                console.log(randomWord)
+            
+                function shuffledArr(randomWord) {
+                    for (let i = randomWord.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [randomWord[i], randomWord[j]] = [randomWord[j], randomWord[i]]
+                    }  
+                    return randomWord      
+                }
+                console.log(shuffledArr(randomWord))
+                randomWord = randomWord.join(" ")
+                console.log(randomWord)
+                alert(randomWord)
+            
+                alert("Can you guess the word? You have three tries")
+                
+            
+                let chosenWord = words[randomNumber]
+                console.log(chosenWord)                
+
+        
+                
+                for (i=0; i< 3; i++) {
+                    let guessWord = prompt(">>> ")
+                    console.log(guessWord)
+                    if (guessWord == chosenWord) {
+                        alert("You are right!")
+                        break;
+                    } else {
+                        alert(`You have  ${2-i} chances left.`)
+                    }
+                    } 
+                alert(`The word was ${chosenWord}`)                       
+                      
+                
+
+            function playAgain() {
+                let play = prompt("Do you want to play again? ").toLowerCase
+                if (play === "yes" || play === "y"){
+                    window.location.reload(true);
+                }
+            }
+            playAgain()
+
+        </script>
+    </body>
+</html>
